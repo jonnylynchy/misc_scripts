@@ -17,14 +17,16 @@
 // };
 function ActionMenu(options, jq) {
   'use strict';
-  
   // Immediate check for arguments
+  // Check for passed jQuery
   if (typeof jq === 'undefined') {
     throw 'You need to pass jQuery as "jQuery" or "$".';
-  } else if (typeof options === 'undefined') {
+  }
+  // Check for options object
+  if (typeof options === 'undefined') {
     throw 'You need to pass the options object.';
   }
-  
+
   var self = this;
   self.options = options;
   self.top = 0;
@@ -36,7 +38,7 @@ function ActionMenu(options, jq) {
   self.markup = '<div id=""><ul></ul><i class="stem"></i></div>';
   self.container = null;
   self.clickContainer = null;
-  
+
   self.init = function () {
     self.markup = self.markup.replace('id=""', 'id="' + self.options.id + '"');
     self.addContainer();
@@ -46,7 +48,7 @@ function ActionMenu(options, jq) {
     self.clickContainer = jq(self.options.targetCssClass);
     self.setDocumentClick();
   };
-  
+
   self.addContainer = function () {
     jq('body').append(self.markup);
   };
@@ -54,7 +56,7 @@ function ActionMenu(options, jq) {
   self.setPosition = function (top, left) {
     self.container.css({top: top, left: left});
   };
-  
+
   self.display = function (target) {
     self.currentTarget = target;
     self.currentTarget.removeClass('icon-collapse');
@@ -65,7 +67,7 @@ function ActionMenu(options, jq) {
     self.clicked = true;
     self.container.show();
   };
-  
+
   self.remove = function () {
     if (self.currentTarget !== jq('<a></a>')) {
       self.currentTarget.removeClass('icon-collapse-top');
@@ -75,18 +77,17 @@ function ActionMenu(options, jq) {
       self.currentTarget = jq('<a></a>');
     }
   };
-  
+
   self.setTargetAttributes = function () {
     jq(self.options.targetCssClass).click(function () {
       self.setTarget(jq(this));
     });
   };
-  
+
   self.setClickOptions = function (clickOptions) {
     // Loop through options to add items to menu
     jq.each(clickOptions, function (i, value) {
       var ul = self.container.find("ul"), li = jq('<li></li>');
-      
       li.attr('data-id', clickOptions[i]['data-id']);
       li.text(clickOptions[i]['item-text']);
       ul.append(li);
@@ -98,7 +99,7 @@ function ActionMenu(options, jq) {
       });
     });
   };
-  
+
   self.setDocumentClick = function () {
     jq(document).mouseup(function (e) {
       if (!self.container.is(e.target) && self.container.has(e.target).length === 0 && !self.clickContainer.is(e.target)) {
