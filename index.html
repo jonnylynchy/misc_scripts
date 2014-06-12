@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Test file</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+	<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->		
+    <!--[if IE]><link rel="stylesheet" href="css/commonUI-IE.css"><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/commonUI-IE_8.css"><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="css/font-awesome-ie7.css">
+	<link rel="stylesheet" href="css/commonUI-IE_7.css"><![endif]-->
+    <link rel="stylesheet" href="css/font-awesome.min.css"   />
+    <link rel="stylesheet" href="css/actionMenu.css"    />
+
+    <style>
+        body{
+            font-family: arial, sans-serif;
+            color:#494949;
+        }
+
+        /* STYLES FOR STAND ALONE GRID/TABLE */
+        
+        .gridTable{
+            font-size:11px;
+            padding:0;
+            margin:0; 
+            border-spacing: 0px;
+            border-collapse: separate;
+            border: 1px solid #d7d7d7;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        .gridTable th, .gridTable td{
+            padding: 7px 12px;
+            text-align: left;
+        }
+
+        .gridTable td{
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .gridTable th:first-child{
+            -webkit-border-top-left-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            border-top-left-radius: 5px;
+        }
+
+        .gridTable th:last-child{
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topright: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .gridTable tr td{
+            border-top:1px solid #ededed;
+            border-right: 1px solid #ededed;
+            text-align: left;
+        }
+
+        .gridTable tr:first-child td{
+            border-top: 1px solid #d7d7d7;
+        }
+
+        .gridTable tr td:last-child{
+            border-right:none;
+        }
+
+        .gridTable tr:last-child td:first-child{
+            -webkit-border-bottom-left-radius: 5px;
+            -moz-border-radius-bottomleft: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .gridTable tr:last-child td:last-child{
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-radius-bottomright: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .gridTable th{
+            border-right:1px solid #d7d7d7;
+            background: #e5f1fc; /* Old browsers */
+            background: -moz-linear-gradient(top,  #e5f1fc 1%, #e5f1fc 50%, #cee5f9 51%, #cee5f9 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#e5f1fc), color-stop(50%,#e5f1fc), color-stop(51%,#cee5f9), color-stop(100%,#cee5f9)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #e5f1fc 1%,#e5f1fc 50%,#cee5f9 51%,#cee5f9 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #e5f1fc 1%,#e5f1fc 50%,#cee5f9 51%,#cee5f9 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #e5f1fc 1%,#e5f1fc 50%,#cee5f9 51%,#cee5f9 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #e5f1fc 1%,#e5f1fc 50%,#cee5f9 51%,#cee5f9 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5f1fc', endColorstr='#cee5f9',GradientType=0 ); /* IE6-9 */
+        }
+
+        .gridTable th:last-child{
+            border-right: none;
+        }
+
+        .gridTable tr:nth-child(even) {background: #f6f6f6}
+        .gridTable tr:nth-child(odd) {background: #FFF}
+        
+    </style>
+
+</head>
+		
+<body>
+    <h3>Franchise Report</h3>
+    <table class="gridTable">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Franchise</th>
+                <th>January</th>
+                <th>February</th>
+                <th>March</th>
+                <th>April</th>
+                <th>May</th>
+                <th>June</th>
+                <th>July</th>
+                <th>August</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="1">
+                <td><a class="k-grid-icon icon-collapse green"></a></td>
+                <td>Joe's Burgers</td>
+                <td>10,550.65</td>
+                <td>20,564.23</td>
+                <td>15,245.37</td>
+                <td>12,578.68</td>
+                <td>10,550.65</td>
+                <td>15,245.37</td>
+                <td>20,564.23</td>
+                <td>12,578.68</td>
+            </tr>
+            <tr id="2">
+                <td><a class="k-grid-icon icon-collapse green"></a></td>
+                <td>Mama's Diner</td>
+                <td>12,578.68</td>
+                <td>10,550.65</td>
+                <td>20,564.23</td>
+                <td>15,245.37</td>
+                <td>10,550.65</td>
+                <td>15,245.37</td>
+                <td>20,564.23</td>
+                <td>12,578.68</td>
+            </tr>
+            <tr id="3">
+                <td><a class="k-grid-icon icon-collapse green"></a></td>
+                <td>Jojo's Sweet Shack</td>
+                <td>10,550.65</td>
+                <td>20,564.23</td>
+                <td>15,245.37</td>
+                <td>12,578.68</td>
+                <td>10,550.65</td>
+                <td>15,245.37</td>
+                <td>20,564.23</td>
+                <td>12,578.68</td>
+            </tr>
+            <tr>
+                <td><a class="k-grid-icon icon-collapse green"></a></td>
+                <td>Freddie's Fries</td>
+                <td>20,564.23</td>
+                <td>15,245.37</td>
+                <td>12,578.68</td>
+                <td>10,550.65</td>
+                <td>15,245.37</td>
+                <td>10,550.65</td>
+                <td>20,564.23</td>
+                <td>12,578.68</td>
+            </tr>
+            <tr>
+                <td><a class="k-grid-icon icon-collapse green"></a></td>
+                <td>Torchy's Tacos</td>
+                <td>10,550.65</td>
+                <td>10,550.65</td>
+                <td>20,564.23</td>
+                <td>15,245.37</td>
+                <td>12,578.68</td>
+                <td>15,245.37</td>
+                <td>20,564.23</td>
+                <td>12,578.68</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="js/ActionMenu.js"></script>
+    <!-- IMPLEMENTATION -->
+    <script>
+    $(document).ready(function(){
+      // create json object to push as menu options (this could be from a service)
+      var menuOptions = [
+        {'data-id': 1, 'item-text': 'Deactivate', callback: deactivate},
+        {'data-id': 2, 'item-text': 'Remove', callback: remove},
+        {'data-id': 3, 'item-text': 'Activate', callback: activate}
+      ];
+      // Options object 
+      // 1: id to assign menu container | 2: menu items | 3: target css class/html el for click
+      var options = {
+        id:             'actionMenu',
+        menuOptions:    menuOptions,
+        targetCssClass: 'a.k-grid-icon'
+      };
+      
+      // create new instance of ActionMenu with options and jquery, init menu
+      actionMenu = new ActionMenu(options, $).init();
+    });
+
+    // Example Callback Functions -------------------------------------
+    var deactivate = function () {
+      // Holds scope from target - can use 'this' here
+      console.log("Target: ", this);
+      console.log('hello from the Deactivate option!');
+    }
+
+    var remove = function () {
+      console.log('hello from the Remove option!');
+    }
+
+    var activate = function () {
+      console.log('hello from the Activate option!');
+    }
+    </script>
+</body>
+</html>

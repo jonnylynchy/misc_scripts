@@ -1,0 +1,76 @@
+
+/*body {
+  padding: 3rem; 
+  font-family: arial;
+}
+*/
+.k-grid-icon {
+  float: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.k-grid-content [class^="icon-"], .k-grid-content [class*=" icon-"] {
+  font-size: 18px;
+  text-decoration: none!important;
+  text-align: center!important;
+  display: inline-block;
+}
+
+.green {
+  color: #7bc000;
+}
+
+.k-grid td.action, .k-grid td.detail {
+  cursor: pointer;
+}
+
+li, ul {
+  list-style-type: none;
+}
+
+/* Menu Styles */
+#actionMenu{
+  position: absolute;
+  display: none;
+}
+
+#actionMenu>ul, #actionMenu .parent>ul {
+  overflow: hidden;
+  margin: 0;
+  background-color: #FFF;
+  border: 5px solid rgba(0,0,0,.55);
+  border-radius: 8px;
+  background-clip: padding-box;
+  width: auto;
+  padding: 7px 0;
+  min-width: 150px;
+ 
+}
+
+#actionMenu>ul li:hover, #actionMenu>ul li.parent li:hover {
+  color: #FFF;
+  background-color: #1688c3;
+}
+
+#actionMenu>ul li {
+  margin: 0;
+  color: #002664;
+  font-size: 11px;
+  display: block;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: transparent;
+}
+
+#actionMenu .stem {
+  position: absolute;
+  top: 15px;
+  left: -10px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 10px transparent solid;
+  border-bottom: 10px transparent solid;
+  border-right: 10px solid rgba(0,0,0,0.55);
+}
